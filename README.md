@@ -8,6 +8,26 @@ A matéria de Clean Code tem como objetivo melhorar a forma como os códigos sã
 
 ### Nomenclaturas
 
-Na aula sobre boas práticas relacionadas a nomes de variáveis, funcões e classes foi proposto um [exercício](https://gitlab.com/professor-rvenson/cleancode-2025-1/-/blob/main/exercicios/exercicio-nomes_significativos.md?ref_type=heads&plain=0) de correção de códigos. 
+Na aula sobre boas práticas relacionadas a nomes de variáveis, funcões e classes foi proposto um [exercício](https://gitlab.com/professor-rvenson/cleancode-2025-1/-/blob/main/exercicios/exercicio-nomes_significativos.md?ref_type=heads&plain=0) de correção de códigos Python. 
 
-:computer: [Clique aqui](https://gist.github.com/ardnaile/caa8c1cbf13ef6ea59de7e7266d46279) para acessar o gist com a resolução!
+[:computer: Clique aqui](https://gist.github.com/ardnaile/4bbc960ab555580ad2188e8d4d7c2d0e) para acessar o gist com a resolução!
+
+### Funções
+
+Foi realizado um [exercício](https://gitlab.com/professor-rvenson/cleancode-2025-1/-/blob/main/exercicios/exercicio-funcoes.md?ref_type=heads) para corrigir códigos Java levando em consideração práticas de Clean Code relacionadas à funções. Alguns dos problemas resolvidos foram:
+
+* Remover o uso desnecessário de switch/case [💻]() 
+* Remover assinaturas de métodos com número excessivo de parâmetros [💻]()
+* Remover parâmetros booleanos das funções [💻]()
+* Resolver um problema de imutabilidade que causa problemas no preço final do produto [💻]()
+* Reescrever métodos com funcionamento muito parecido [💻]()
+
+### Comentários
+
+O [exercício](https://gitlab.com/professor-rvenson/cleancode-2025-1/-/blob/main/exercicios/exercicio-comentarios.md?ref_type=heads) sobre boas práticas de comentários tinha como objetivos:
+
+* Remover comentários redundantes [💻]()
+* Remover comentários enganosos [💻]()
+* Substituir comentários por métodos quando possível [💻]()
+
+
