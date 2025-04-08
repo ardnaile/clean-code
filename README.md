@@ -1,33 +1,44 @@
-# Clean Code
+# Exercício sobre Tratamento de Erros
 
-Repositório utilizado na matéria de Clean Code do curso de Engenharia de Software da Unisatc.
+Este projeto simula um torneio de futebol com registro de times, partidas e exibição do resultado final. Todos os erros são tratados e registrados em um arquivo de log.
 
-### Objetivo
+## 🛠 Tecnologias
 
-A matéria de Clean Code tem como objetivo melhorar a forma como os códigos são escritos, já que muitas vezes ao aprender programação não focamos na beleza do código e sim no aprendizado. São propostas diversos exercícios de leitura e correção de códigos para que cumpram os requisitos de legibilidade, mantenibilidade, testabilidade, extensibilidade e elegância.
+- Java
+- Spring Boot (apenas para a estrutura do projeto, sem uso de API web)
+- SLF4J + Logback (para logging)
 
-### Nomenclaturas
+## ⚙️ Como executar usando a IDE Intellij IDEA
 
-Na aula sobre boas práticas relacionadas a nomes de variáveis, funcões e classes foi proposto um [exercício](https://gitlab.com/professor-rvenson/cleancode-2025-1/-/blob/main/exercicios/exercicio-nomes_significativos.md?ref_type=heads&plain=0) de correção de códigos Python. 
+- Abra o projeto na IDE
+- Vá até a classe Main.java
+- Clique com o botão direito > Run
 
-[:computer: Clique aqui](https://gist.github.com/ardnaile/4bbc960ab555580ad2188e8d4d7c2d0e) para acessar o gist com a resolução!
+## 🧾 Log de erro
+Os erros são registrados em um arquivo localizado em:
 
-### Funções
+```
+logs/erros.log
+```
 
-Foi realizado um [exercício](https://gitlab.com/professor-rvenson/cleancode-2025-1/-/blob/main/exercicios/exercicio-funcoes.md?ref_type=heads) para corrigir códigos Java levando em consideração práticas de Clean Code relacionadas à funções. Alguns dos problemas resolvidos foram:
+### Configuração
+A configuração para garantir que todas as exceções tratadas com `logger.error()` sejam salvas no arquivo de logs está em src/main/resources/logback.xml com este conteúdo:
 
-* Remover o uso desnecessário de switch/case [💻]() 
-* Remover assinaturas de métodos com número excessivo de parâmetros [💻]()
-* Remover parâmetros booleanos das funções [💻]()
-* Resolver um problema de imutabilidade que causa problemas no preço final do produto [💻]()
-* Reescrever métodos com funcionamento muito parecido [💻]()
+```xml
+<configuration>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/erros.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
 
-### Comentários
+    <root level="error">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
 
-O [exercício](https://gitlab.com/professor-rvenson/cleancode-2025-1/-/blob/main/exercicios/exercicio-comentarios.md?ref_type=heads) sobre boas práticas de comentários tinha como objetivos:
-
-* Remover comentários redundantes [💻]()
-* Remover comentários enganosos [💻]()
-* Substituir comentários por métodos quando possível [💻]()
+```
 
 
