@@ -1,0 +1,16 @@
+2025-04-08 14:40:39 [main] ERROR eliandra.cardoso.tratamento_de_erros.Torneio - Erro ao adicionar time: 
+java.lang.IllegalArgumentException: Nome inválido
+	at eliandra.cardoso.tratamento_de_erros.Torneio.adicionarTime(Torneio.java:17)
+	at eliandra.cardoso.tratamento_de_erros.Main.main(Main.java:12)
+2025-04-08 14:40:39 [main] ERROR eliandra.cardoso.tratamento_de_erros.Torneio - Erro ao criar partida entre Brasil e Argentina: -10x-2
+java.lang.IllegalArgumentException: Número inválido de gols
+	at eliandra.cardoso.tratamento_de_erros.Torneio.criarPartida(Torneio.java:44)
+	at eliandra.cardoso.tratamento_de_erros.Main.main(Main.java:20)
+2025-04-08 14:40:39 [main] ERROR eliandra.cardoso.tratamento_de_erros.Torneio - Erro ao criar partida entre Argentina e Nigéria: 3x3
+java.lang.IllegalArgumentException: Time não existe
+	at eliandra.cardoso.tratamento_de_erros.Torneio.lambda$encontrarTime$2(Torneio.java:35)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at eliandra.cardoso.tratamento_de_erros.Torneio.encontrarTime(Torneio.java:35)
+	at eliandra.cardoso.tratamento_de_erros.Torneio.criarPartida(Torneio.java:41)
+	at eliandra.cardoso.tratamento_de_erros.Main.main(Main.java:24)
+
